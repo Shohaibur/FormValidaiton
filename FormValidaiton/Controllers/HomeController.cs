@@ -39,5 +39,16 @@ namespace FormValidaiton.Controllers
         {
             return View(l);
         }
+        [HttpGet]
+        public ActionResult Signup()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Signup(Signup s)
+        {
+            return View(s);
+        }
     }
 }

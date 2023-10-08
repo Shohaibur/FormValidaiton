@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_OuterLayout.cshtml";
+    ViewBag.Title = "Signup";
+}
+
+
+<h2>Sign up</h2>
+
+
+@Html.ValidationSummary()
+<form action="" method="post">
+
+
+    Name :
+    <input type="text" value="@(Model==null ? "":Model.Name)" name="Name" />
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+    <br />
+
+    User Id :
+    <input type="number" name="UId" />
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Id")</span>
+    <br />
+
+    Password :
+    <input type="password" name="password" />
+    <br />
+    <span class="text-danger"></span>
+    <br />
+
+    Id :
+    <input type="number" name="Id" />
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Id")</span>
+    <br />
+
+
+    Email :
+    <input type="email" name="email" />
+    <br />
+    <span class="text-danger"></span>
+    <br />
+
+
+
+    <label> Birth date :</label>
+    <input type="date" date="" id="start" name="trip-start" /> <br /> <br />
+
+
+    <input type="submit" value="Submit" class="btn btn-danger" />
+
+</form>
