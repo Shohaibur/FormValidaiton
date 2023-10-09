@@ -3,16 +3,16 @@
     ViewBag.Title = "Signup";
 }
 
+<p><h2>Sign up</h2></p>
 
-<h2>Sign up</h2>
 
-
-@Html.ValidationSummary()
 <form action="" method="post">
 
 
     Name :
-    <input type="text" value="@(Model==null ? "":Model.Name)" name="Name" />
+    @*<input type="text" value="@(Model==null ? "":Model.Name)" name="Name" />*@
+    <input type="text" name="Name" />
+
     <br />
     <span class="text-danger">@Html.ValidationMessage("Name")</span>
     <br />
@@ -20,7 +20,7 @@
     User Id :
     <input type="number" name="UId" />
     <br />
-    <span class="text-danger">@Html.ValidationMessage("Id")</span>
+    @*<span class="text-danger">@Html.ValidationMessage("Id")</span>*@
     <br />
 
     Password :
