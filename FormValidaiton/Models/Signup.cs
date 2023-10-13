@@ -21,7 +21,10 @@ namespace FormValidaiton.Models
         [Required(ErrorMessage ="Password cannot be empty")]
         //Syntax: [RegularExpression(@"^$",ErrorMessage"")]
         [RegularExpression(@"^(?=.*[A-Z]{1,})(?=.*[a-z]{2,})[A-Za-z]{4}(?=.*[\d!@#$%^&*]{4,})[A-Za-z0-9!@#$%^&*]{4,}$", ErrorMessage ="Provide an unique password (length minimum 8)")]
+       public string password { get; set; }
 
-        public string password { get; set; }
+        [Required(ErrorMessage = "Id field cannot be empty")]
+        [RegularExpression(@"^\d{2}-\d{5}-\d{1}$",ErrorMessage ="Provide a valid Id with format xx-xxxx-x")]
+        public string Id { get; set; }
     }
 }
