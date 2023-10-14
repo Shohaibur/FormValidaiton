@@ -25,3 +25,6 @@ Custom Validation rules for dfferent field in the form :
  2. I.e. if id is '20-42424-1' then email must be '20-42424-1@student.aiub.edu'
 #### Date
  1. Date of birth must be at least 18 years or older
+
+![alt text](Images/Signupinvalid1.png)
+
