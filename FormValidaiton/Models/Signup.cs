@@ -32,11 +32,17 @@ namespace FormValidaiton.Models
 
         [Required(ErrorMessage = "Email field cannot be empty")]
 
-        [RegularExpression(@"^{Id}@student\.aiub\.edu$", ErrorMessage = "Invalid email format.")]
-       
+        /*[RegularExpression(@"^{emailf}@student\.aiub\.edu$", ErrorMessage = "Invalid email format.")]*/
+        [MatchingEmail]
+
         public string Email { get; set; }
 
-        
+        [Required(ErrorMessage = "Date of Birth is required")]
+        [DataType(DataType.Date)]
+        [Display(Name = "Date of Birth")]
+        [MinimumAge(18, ErrorMessage = "You must be at least 18 years old.")]
+        public DateTime Date { get; set; }
+
 
 
     }

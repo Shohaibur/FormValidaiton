@@ -3,73 +3,73 @@
     ViewBag.Title = "Signup";
 }
 
-<h2>
-   
 
+<h3>
     @if (Model != null)
     {@Model.Name <br />
-    @Model.password <br />
     @Model.UId<br />
+    @Model.password <br />
     @Model.Id<br />
-    @Model.Email
-
-
+    @Model.Email <br />
+    @Model.Date
 }
-</h2>
-<h2>
-    @{if (Model != null)
-        {
-            string emailf = Model.Id + "@student.aiub.edu";
-            @emailf;
+</h3>
+
+@*    <h2>
+        @{if (Model != null)
+            {
+                string emailf = Model.Id + "@student.aiub.edu";
+                @emailf;
+            }
         }
-    }
-</h2>
+    </h2>*@
 
-<p><h2>Sign up</h2></p>
-
-
-<form action="" method="post">
+    <p><h2>Sign up</h2></p>
 
 
-    Name :
-    @*<input type="text" value="@(Model==null ? "":Model.Name)" name="Name" />*@
-    <input type="text" name="Name" />
-
-    <br />
-    <span class="text-danger">@Html.ValidationMessage("Name")</span>
-    <br />
-
-    User Id :
-    <input type="text" name="UId" />
-    <br />
-    <span class="text-danger">@Html.ValidationMessage("UId")</span>
-    <br />
-
-    Password :
-    <input type="password" name="password" />
-    <br />
-    <span class="text-danger">@Html.ValidationMessage("password")</span>
-    <br />
-
-    Id :
-    <input type="text" name="Id" placeholder="xx-xxxxx-x" />
-    <br />
-    <span class="text-danger">@Html.ValidationMessage("Id")</span>
-    <br />
+    <form action="" method="post">
 
 
-    Email :
-    <input type="text" name="Email" placeholder="x-xxxxx-x@student.aiub.edu" />
-    <br />
-    <span class="text-danger">@Html.ValidationMessage("Email")</span>
-    <br />
+        Name :
+        @*<input type="text" value="@(Model==null ? "":Model.Name)" name="Name" />*@
+        <input type="text" name="Name" />
+
+        <br />
+        <span class="text-danger">@Html.ValidationMessage("Name")</span>
+        <br />
+
+        User Id :
+        <input type="text" name="UId" />
+        <br />
+        <span class="text-danger">@Html.ValidationMessage("UId")</span>
+        <br />
+
+        Password :
+        <input type="password" name="password" />
+        <br />
+        <span class="text-danger">@Html.ValidationMessage("password")</span>
+        <br />
+
+        Id :
+        <input type="text" name="Id" placeholder="xx-xxxxx-x" />
+        <br />
+        <span class="text-danger">@Html.ValidationMessage("Id")</span>
+        <br />
+
+
+        Email :
+        <input type="text" name="Email" placeholder="x-xxxxx-x@student.aiub.edu" />
+        <br />
+        <span class="text-danger">@Html.ValidationMessage("Email")</span>
+        <br />
 
 
 
-    <label> Birth date :</label>
-      <input type="date" date="" id="start"> <br />
-   
+        <label> Date of Birth :</label>
+        <input type="date" name="Date"> <br />
+        <span class="text-danger">@Html.ValidationMessage("Date")</span>
+        <br />
 
-    <input type="submit" value="Submit" class="btn btn-danger" />
+        <input type="submit" value="Submit" class="btn btn-danger" />
 
-</form>
+    </form>
