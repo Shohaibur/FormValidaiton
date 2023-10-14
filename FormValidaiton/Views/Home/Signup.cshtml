@@ -3,6 +3,28 @@
     ViewBag.Title = "Signup";
 }
 
+<h2>
+   
+
+    @if (Model != null)
+    {@Model.Name <br />
+    @Model.password <br />
+    @Model.UId<br />
+    @Model.Id<br />
+    @Model.Email
+
+
+}
+</h2>
+<h2>
+    @{if (Model != null)
+        {
+            string emailf = Model.Id + "@student.aiub.edu";
+            @emailf;
+        }
+    }
+</h2>
+
 <p><h2>Sign up</h2></p>
 
 
@@ -37,16 +59,16 @@
 
 
     Email :
-    <input type="email" name="email" />
+    <input type="text" name="Email" placeholder="x-xxxxx-x@student.aiub.edu" />
     <br />
-    <span class="text-danger"></span>
+    <span class="text-danger">@Html.ValidationMessage("Email")</span>
     <br />
 
 
 
     <label> Birth date :</label>
-    <input type="date" date="" id="start" name="trip-start" /> <br /> <br />
-
+      <input type="date" date="" id="start"> <br />
+   
 
     <input type="submit" value="Submit" class="btn btn-danger" />
 

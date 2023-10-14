@@ -42,12 +42,14 @@ namespace FormValidaiton.Controllers
         [HttpGet]
         public ActionResult Signup()
         {
+
             return View();
         }
 
         [HttpPost]
         public ActionResult Signup(Signup s)
         {
+            
             return View(s);
         }
     }
