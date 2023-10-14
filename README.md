@@ -19,3 +19,9 @@ Custom Validation rules for dfferent field in the form :
      2. Numbers
 #### Id
  1. Id structure must be of x-xxxxx-x i.e. 20-42424-1
+
+#### Email
+ 1. Email must be of structure xx-xxxxx-x@student.aiub.edu
+ 2. I.e. if id is '20-42424-1' then email must be '20-42424-1@student.aiub.edu'
+#### Date
+ 1. Date of birth must be at least 18 years or older
