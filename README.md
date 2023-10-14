@@ -26,13 +26,14 @@ Custom Validation rules for dfferent field in the form :
 #### Date
  1. Date of birth must be at least 18 years or older
 
-# Invalid Signup
-
+# Invalid Signup snapshot
+### When input fields are empty
 ![alt text](FormValidaiton/Images/Singupinvalid1.png)
 
-![alt text](FormValidaiton/Images/Singupinvalid2.png)
+### When input input format is wrong
+![alt text](FormValidaiton/Images/Signupinvalid2.png)
 
-# Valid Signup
+# Valid Signup snapshot
 
 ![alt text](FormValidaiton/Images/Singupvalid1.png)
 
